@@ -25,7 +25,58 @@
         <h2>About Our Job Portal</h2>
         <p>Welcome to Job Junction, your trusted partner in career growth and professional development. We connect talented individuals with outstanding career opportunities across various industries.</p>
         
-       
+        <h2>Current Job Openings</h2>
+        <div class="job-listings">
+            <div class="job-card">
+                <h3>Senior Software Engineer</h3>
+                <p>Location: New York, NY</p>
+                <p>Salary: $120,000 - $150,000</p>
+                <p>Experience: 5+ years</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h3>Data Analyst</h3>
+                <p>Location: San Francisco, CA</p>
+                <p>Salary: $80,000 - $100,000</p>
+                <p>Experience: 2-3 years</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h3>Marketing Manager</h3>
+                <p>Location: Chicago, IL</p>
+                <p>Salary: $90,000 - $110,000</p>
+                <p>Experience: 4+ years</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+        </div>
     </div>
+    <style>
+        .job-listings {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .job-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            background: #f9f9f9;
+        }
+        .apply-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .apply-btn:hover {
+            background: #0056b3;
+        }
+    </style>
 </body>
 </html>
