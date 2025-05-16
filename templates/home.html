@@ -8,12 +8,22 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
         }
         .about-section {
             margin-top: 30px;
             max-width: 800px;
+            width: 100%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -58,14 +68,17 @@
             gap: 20px;
             flex-wrap: wrap;
             margin-top: 20px;
+            justify-content: center;
+            width: 100%;
         }
         .job-card {
             border: 1px solid #ddd;
-            padding: 20px;
+            padding: 20px 20px 60px 20px;
             border-radius: 8px;
             width: 300px;
             background: #f9f9f9;
             position: relative;
+            text-align: center;
         }
         .apply-btn {
             background: #007bff;
