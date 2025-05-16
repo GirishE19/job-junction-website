@@ -1,2 +1,14 @@
 language = "python3"
 run ="python app.py"
+
+[workflows]
+runButton = "Python"
+
+[[workflows.workflow]]
+name = "Python"
+author = 14927453
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 app.py"
