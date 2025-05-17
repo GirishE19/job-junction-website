@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,56 +6,122 @@
     <title>Job Junction</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             line-height: 1.6;
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 30px;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #007bff;
             text-align: center;
-            padding: 20px;
+            margin-bottom: 20px;
         }
-        .about-section {
-            margin-top: 30px;
-            max-width: 800px;
-            width: 100%;
-        }
+
         img {
             max-width: 100%;
             height: auto;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section, .contact-section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            max-width: 800px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .job-list {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .job-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .job-item h3 {
+            margin-top: 0;
+            color: #28a745;
+            margin-bottom: 10px;
+        }
+
+        .job-item p {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .job-item strong {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .apply-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            align-self: flex-start;
+            margin-top: 15px;
+        }
+
+        .apply-button:hover {
+            background-color: #0056b3;
+        }
+
+        .contact-section p {
+            text-align: center;
+            color: #777;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <h1>Job Junction</h1>
-    <img src="static/images/job.jpg" alt="Job Junction Image" height="400" width="600">
-    
+    <img src="static/images/job.jpg" alt="Job Junction Image" width="800">
+
     <div class="about-section">
         <h2>About Our Job Portal</h2>
-        <p>Welcome to Job Junction, your trusted partner in career growth and professional development. We connect talented individuals with outstanding career opportunities across various industries.</p>
-        
-        <h2>Current Job Openings</h2>
-        <p>
-            {% for job in jobs %}
-                <div>
-                    <h3>{{ job.title }}</h3>
-                    <p>{{ job.description }}</p>
-                    <p><strong>Location:</strong> {{ job.location }}</p>
-                    <p><strong>Company:</strong> {{ job.company }}</p>
-                    <p><strong>Salary:</strong> {{ job.salary }}</p>
-                    <p><strong>Experience:</strong> {{ job.experience }}</p>
-                    <p><strong>Skills:</strong> {{ job.skills }}</p>
-                    <p><strong>Posted On:</strong> {{ job.posted_on }}</p>
-                    <p><strong>Last Date:</strong> {{ job.last_date }}</p>
-                    <a href="/apply/{{ job.id }}">Apply Now</a>
-                </div>
-                <hr>
-        </p>
+        <p>Welcome to Job Junction, your trusted partner in career growth and professional development. We connect talented individuals with outstanding career opportunities across various industries. Our platform is designed to make your job search seamless and efficient. Explore our current openings and take the next step in your career journey with us!</p>
+    </div>
+
+    <h2>Current Job Openings</h2>
+    <ul class="job-list">
+        {% for job in jobs %}
+        {% include 'jobitem.html' %}
+        {% endfor %}
+    </ul>
+
     <div class="contact-section">
         <h2>Contact Us</h2>
-        <p>Have questions? Reach out to us!</p>
-        <p>📞 Phone: +1 (555) 123-4567</p>
-        <p>📧 Email: contact@jobjunction.com</p>
+        <p>Have questions or need assistance? Reach out to our dedicated support team.</p>
+        <p>📞 Phone: +91 80-XXXX-XXXX</p>
+        <p>📧 Email: support@jobjunction.in</p>
+        <p>Our team in Bengaluru is ready to help you!</p>
     </div>
 </body>
 </html>
