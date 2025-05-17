@@ -36,73 +36,22 @@
         <p>Welcome to Job Junction, your trusted partner in career growth and professional development. We connect talented individuals with outstanding career opportunities across various industries.</p>
         
         <h2>Current Job Openings</h2>
-        <div class="job-listings">
-            <div class="job-card">
-                <h3>Senior Software Engineer</h3>
-                <p>Location: New York, NY</p>
-                <p>Salary: $120,000 - $150,000</p>
-                <p>Experience: 5+ years</p>
-                <button class="apply-btn">Apply Now</button>
-            </div>
-
-            <div class="job-card">
-                <h3>Data Analyst</h3>
-                <p>Location: San Francisco, CA</p>
-                <p>Salary: $80,000 - $100,000</p>
-                <p>Experience: 2-3 years</p>
-                <button class="apply-btn">Apply Now</button>
-            </div>
-
-            <div class="job-card">
-                <h3>Marketing Manager</h3>
-                <p>Location: Chicago, IL</p>
-                <p>Salary: $90,000 - $110,000</p>
-                <p>Experience: 4+ years</p>
-                <button class="apply-btn">Apply Now</button>
-            </div>
-        </div>
-    </div>
-    <style>
-        .job-listings {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-            justify-content: center;
-            width: 100%;
-        }
-        .job-card {
-            border: 1px solid #ddd;
-            padding: 20px 20px 60px 20px;
-            border-radius: 8px;
-            width: 300px;
-            background: #f9f9f9;
-            position: relative;
-            text-align: center;
-        }
-        .apply-btn {
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            position: absolute;
-            right: 20px;
-            bottom: 20px;
-        }
-        .apply-btn:hover {
-            background: #0056b3;
-        }
-        .contact-section {
-            margin-top: 40px;
-            padding: 20px;
-            background: #f0f0f0;
-            border-radius: 8px;
-            width: 100%;
-            text-align: center;
-        }
-    </style>
+        <p>
+            {% for job in jobs %}
+                <div>
+                    <h3>{{ job.title }}</h3>
+                    <p>{{ job.description }}</p>
+                    <p><strong>Location:</strong> {{ job.location }}</p>
+                    <p><strong>Company:</strong> {{ job.company }}</p>
+                    <p><strong>Salary:</strong> {{ job.salary }}</p>
+                    <p><strong>Experience:</strong> {{ job.experience }}</p>
+                    <p><strong>Skills:</strong> {{ job.skills }}</p>
+                    <p><strong>Posted On:</strong> {{ job.posted_on }}</p>
+                    <p><strong>Last Date:</strong> {{ job.last_date }}</p>
+                    <a href="/apply/{{ job.id }}">Apply Now</a>
+                </div>
+                <hr>
+        </p>
     <div class="contact-section">
         <h2>Contact Us</h2>
         <p>Have questions? Reach out to us!</p>
