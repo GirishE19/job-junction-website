@@ -1,8 +1,53 @@
-<nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-      job junction
-    </a>
-  </div>
+<nav class="navbar-horizontal">
+  <ul class="navbar-nav-horizontal">
+    <li class="nav-item-horizontal">
+      <a class="nav-link-horizontal" href="#">Home</a>
+    </li>
+    <li class="nav-item-horizontal">
+      <a class="nav-link-horizontal" href="#">About</a>
+    </li>
+    <li class="nav-item-horizontal">
+      <a class="nav-link-horizontal" href="#">Services</a>
+    </li>
+    <li class="nav-item-horizontal">
+      <a class="nav-link-horizontal" href="#">Contact</a>
+    </li>
+  </ul>
 </nav>
+
+<style>
+  .navbar-horizontal {
+    background-color: #f8f9fa; /* Light background */
+    color: #212529; /* Dark text */
+    padding: 10px 20px; /* Adjust vertical padding as needed */
+    font-family: sans-serif; /* Standard font */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  }
+
+  .navbar-nav-horizontal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Arrange items horizontally */
+    align-items: center; /* Vertically align items in the bar */
+    justify-content: center; /* Center the links horizontally within the bar (optional) */
+  }
+
+  .nav-item-horizontal {
+    margin: 0 15px; /* Add horizontal spacing between links */
+  }
+
+  .nav-link-horizontal {
+    color: #212529;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px; /* Padding around link text */
+    border-radius: 5px; /* Optional: slight rounded corners */
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-link-horizontal:hover {
+    background-color: #e9ecef; /* Light background on hover */
+    color: #0056b3; /* Darker text on hover */
+  }
+</style>
